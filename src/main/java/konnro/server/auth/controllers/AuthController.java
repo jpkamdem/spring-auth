@@ -14,18 +14,18 @@ import konnro.server.users.models.User;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-  @PostMapping("/signup")
-  ResponseEntity<?> signup(@Valid @RequestBody User user) {
+  // @PostMapping("/signup")
+  // ResponseEntity<?> signup(@Valid @RequestBody User user) {
 
-  }
+  // }
 
-  @PostMapping("/login")
-  ResponseEntity<?> login(@Valid @RequestBody LoginCredentials payload) {
+  // @PostMapping("/login")
+  // ResponseEntity<?> login(@Valid @RequestBody LoginCredentials payload) {
 
-  }
+  // }
 
-  @PostMapping("/logout")
-  ResponseEntity<?> logout() {
+  // @PostMapping("/logout")
+  // ResponseEntity<?> logout() {
 
-  }
+  // }
 }
