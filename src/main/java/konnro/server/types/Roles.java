@@ -1,6 +1,6 @@
 package konnro.server.types;
 
 public enum Roles {
-  regular,
+  user,
   admin
 }
