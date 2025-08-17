@@ -12,6 +12,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
+  security:
+    user:
+      name: test
+      password: test
+
 app:
   secret: 933ed358-a401-4e1e-b1e7-1d655b1ed3d7
   expirationDate: 900000
