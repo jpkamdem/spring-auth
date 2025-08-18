@@ -24,7 +24,6 @@ import konnro.server.types.Roles;
 @Setter
 @Table(name = "users")
 public class User {
-
   @Id
   @GeneratedValue
   private UUID id;
