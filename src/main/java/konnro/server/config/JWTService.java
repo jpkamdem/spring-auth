@@ -4,6 +4,7 @@ import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,12 @@ public class JWTService {
     return Keys.hmacShaKeyFor(keyBytes);
   }
 
-  public String generateToken(String username) {
+  public String generateToken(UUID id, String role) {
     Map<String, Object> claims = new HashMap<>();
-    claims.put("hello", "world!");
+    claims.put("user_id", id);
+    claims.put("user_role", role);
     return Jwts.builder()
         .claims(claims)
-        .subject(username)
         .issuedAt(new Date(System.currentTimeMillis()))
         .expiration(new Date(System.currentTimeMillis() + expirationDate))
         .signWith(getSigningKey())
